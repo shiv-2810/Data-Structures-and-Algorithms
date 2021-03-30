@@ -1,0 +1,28 @@
+Given a string s and an integer array indices of the same length.
+
+The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+
+Return the shuffled string.
+
+
+
+
+
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+       string si=s;
+        for(int i=0;i<s.size();i++)
+        {
+            
+            si[indices[i]]=s[i];
+        }
+        cout<<si;
+        s=si;
+        return s;
+    }
+};
+
+
+solution link:
+https://leetcode.com/submissions/detail/474165291/
