@@ -1,0 +1,38 @@
+Description
+
+Given the array nums, obtain a subsequence of the array whose sum of elements is strictly greater than the sum of the non included elements in such subsequence. 
+If there are multiple solutions, return the subsequence with minimum size and if there still exist multiple solutions, return the subsequence with the maximum total
+sum of all its elements. A subsequence of an array can be obtained by erasing some (possibly zero) elements from the array. 
+Note that the solution with the given constraints is guaranteed to be unique. Also return the answer sorted in non-increasing order.
+
+Example 1:
+
+Input: nums = [4,3,10,9,8]
+Output: [10,9] 
+Explanation: The subsequences [10,9] and [10,8] are minimal such that the sum of their elements is strictly greater than the
+sum of elements not included, however, the subsequence [10,9] has the maximum total sum of its elements.
+
+code solution:
+
+class Solution {
+public:
+    vector<int> minSubsequence(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        vector<int>vec;
+        int a=nums.size()-1;
+        int b,i=0,sum1=0,sum2=0;
+        for(;i<=a;i++)
+        {
+            sum1+=nums[i];
+        }
+        for(i=a;i>=0;i--)
+        {
+            sum1-=nums[i];
+            sum2+=nums[i];
+            vec.push_back(nums[i]);
+            if(sum2>sum1)
+                break;
+        }
+        return vec;
+    }
+};
