@@ -1,0 +1,13 @@
+* Merge sort is a divide and conquer algorithm, it firsts divide the array or input list in two parts
+and then it recursively sort these two parts and after sorting these two parts
+it merges them.
+
+* The good thing about merge sort is that it is a stable sorting algorithm
+it maintains the original order of equal items.
+
+* Time( theta nlogn) Space(n) aux space.
+
+* There is a variant of merge sort called Block merge sort that does emplace sorting.
+
+* ussed in external sorting
+*does not as good as quick sort for arrays
