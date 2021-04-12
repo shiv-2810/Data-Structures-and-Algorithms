@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool sorted(int a[],int n,int i)
+{
+    if(i==n-1)
+    {
+        return true;
+    }
+    if(a[i]<a[i+1])
+      return true;
+      else
+      return false;
+      sorted(a,n,i+1);
+}
+int main()
+{
+    int a[10],n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+      cin>>a[i];
+    if(sorted(a,n,0))
+    {
+        cout<<"Yes";
+    }
+    else
+        cout<<"NO";
+}
