@@ -1,0 +1,18 @@
+/*There are N persons who wants to go to a party there is a constraint that any personscan either go alone
+or go in a pair.Calculate the no of ways in which N persons will go to the party*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ int party(int n)
+ {
+    if(n==1) return 1;
+    if(n==2) return 2;
+   return party(n-1)+(n-1)*party(n-2);
+ }
+ int main()
+ {
+    int n;
+    cin>>n;
+    cout<<party(n);
+ }
