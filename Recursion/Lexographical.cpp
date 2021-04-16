@@ -1,8 +1,8 @@
-Problen statement
+/*Problen statement
 N=13
 Output: 0,1,10,11,12,13,2,3,4,5,6,7,8,9
 
-Solution:
+Solution:*/
 
 
 #include<bits/stdc++.h>
